@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="login-page" class="active">
+        <div class="login-container">
+            <h1>MovieFlix</h1>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button id="login-btn">Login</button>
+            <p id="login-error"></p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <!-- Header -->
+        <header>
+            <div class="logo">MovieFlix</div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search for movies, series, anime...">
+            </div>
+            <div class="user-menu">
+                <button id="my-list-btn"></button>
+                <button id="logout-btn">Log Out</button>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><button class="nav-btn active" data-section="movies">Movies</button></li>
+                <li><button class="nav-btn" data-section="series">Series</button></li>
+                <li><button class="nav-btn" data-section="anime">Anime</button></li>
+            </ul>
+        </nav>
+
+        <!-- Content Sections -->
+        <main>
+            <!-- Movies Section -->
+            <section id="movies-section" class="content-section active">
+                <h2>Movies</h2>
+                <div class="content-grid" id="movies-grid"></div>
+            </section>
+
+            <!-- Series Section -->
+            <section id="series-section" class="content-section">
+                <h2>Series</h2>
+                <div class="content-grid" id="series-grid"></div>
+            </section>
+
+            <!-- Anime Section -->
+            <section id="anime-section" class="content-section">
+                <h2>Anime</h2>
+                <div class="content-grid" id="anime-grid"></div>
+            </section>
+
+            <!-- My List Section -->
+            <section id="my-list-section" class="content-section">
+                <h2>My List</h2>
+                <div class="content-grid" id="my-list-grid"></div>
+            </section>
+        </main>
+
+        <!-- Modal for Seasons and Episodes -->
+        <div id="seasons-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2 id="modal-title"></h2>
+                <div id="seasons-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Player Page -->
+    <div id="video-player-page">
+        <div class="player-header">
+            <button id="back-btn">Back</button>
+            <h2 id="video-title"></h2>
+            <div class="player-controls">
+                <div class="episode-selector">
+                    <button id="current-episode-btn">Current Episode</button>
+                    <div id="episode-dropdown" class="episode-dropdown">
+                        <div id="episode-list"></div>
+                    </div>
+                </div>
+                <button id="add-to-list-btn">Add to My List</button>
+            </div>
+        </div>
+        <div class="video-container">
+            <iframe id="video-frame" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
