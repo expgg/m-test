@@ -147,14 +147,15 @@ header {
 
 @media (max-width: 768px) {
     header {
-        padding: 15px;
+        padding: 10px;
         flex-wrap: wrap;
+        gap: 10px;
     }
 
     .search-container {
         order: 3;
         width: 100%;
-        margin-top: 10px;
+        margin-top: 0;
     }
 
     .logo {
@@ -164,6 +165,11 @@ header {
     .user-menu button {
         padding: 6px 12px;
         font-size: 14px;
+    }
+
+    nav {
+        top: 0;
+        padding: 8px;
     }
 }
 
@@ -284,10 +290,21 @@ main {
 }
 
 @media (max-width: 768px) {
-    .content-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 15px;
+    main {
         padding: 10px;
+    }
+
+    .content-section {
+        margin-top: 0;
+    }
+
+    nav ul {
+        gap: 5px;
+        margin: 0;
+    }
+
+    .content-grid {
+        margin-top: 10px;
     }
 }
 
