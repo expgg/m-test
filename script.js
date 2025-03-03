@@ -511,6 +511,7 @@ closeBtn.addEventListener('click', () => {
 backBtn.addEventListener('click', () => {
     videoPlayerPage.style.display = 'none';
     mainContent.classList.add('active');
+    videoFrame.src = '';
 });
 
 // Add to list button
